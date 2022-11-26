@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS Station Assignment</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+        .center{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const station = {
+            "1001":["Angel Gonzalez", "ags.agonzalez3", "Analog2022", "ags.jose.gajon"],
+            "1002":["Andrea Bustamante", "ags.abustamante", "Black2022", "ags.andrea.bustamante"],
+            "1003":["Emilio Martinez", "ags.emartinez", "Black2022", "ags.emilio.martinez"],
+            "1004":["Alejandro Ochoa", "ags.aochoa2", "Green2022", "ags.alejandro.ochoa"],
+            "1005":["Fernando Castillo", "ags.fcastillo", "Forms2022", "ags.fernando.castillo"],
+            "1006":["Angel Terriquez", "ags.aterriquez", "Black2022", "ags.angel.terriquez"],
+            "1007":["Judith Anderson", "ags.janderson", "Black2022", "ags.judith.anderson"],
+            "1008":["Mario Serrano", "ags.mserrano", "Black2022", "ags.mario.serrano"],
+            "1022":["Dayan Trejo", "ags.dtrejo", "Black2022", "ags.dayan.trejo"],
+            "1023":["Victor Higuera", "ags.vhiguera", "Black2022", "ags.victor.higuera"],
+            "1024":["Ricardo Rico", "ags.rrico", "Black2022", "ags.ricardo.rico"],
+            "1025":["Ana Aispuro", "ags.aaispuro", "Taco2022", "ags.ana.aispuro2"],
+            "1026":["Maria Castellanos", "ags.mcastellanos", "Black2022", "ags.maria.castellanos"],
+            "1027":["Alejandro Gonzalez", "Alejandro Gonzalez", "Global2022", "ags.alejandro.gonzalez2"],
+            "1028":["Jose Sotomayor", "ags.jsotomayor1", "Black2022", "ags.jose.sotomayor"],
+            "1029":["Penelope Guerrero", "ags.pguerrero", "Blue2022", "ags.mladenka.guerrero"],
+            "1031":["Jorge Castillo", "ags.jcastillo", "Forms2022", "ags.jorge.castillo"],
+            "1032":["Adriana Huerta", "ags.ahuerta1", "Blue2022", "ags.adriana.huerta"],
+            "1033":["Paulina Palazuelos", "ags.ppalazuelos", "Green2022", "ags.paulina.palazuelos2"],
+            "1034":["Aylin Montoya", "ags.amontoya", "Purple2022", "ags.ailyn.montoya"],
+            "1035":["Diana Hermosillo", "ags.dhermosillo", "Yellow2022", "ags.diana.hermosillo"]
+        }
+        var element = [
+            "Name: ",
+            "User: ",
+            "Pass: ",
+            "Token Phone: "
+        ]
+        function stationData(){
+            content = document.getElementById("content");
+            string = "";
+            station_number = document.getElementById("station").value;
+            for(var i = 0; i < 4; i++){
+                string += element[i] + station[station_number][i] + "<br>";
+            }
+            document.getElementById("content").innerHTML = string
+        }
+    </script>
+        <div class="center">
+
+            <input id="station" type="text" placeholder="Station Number">
+            <button onclick="stationData()">Search</button>
+            <p id="content"></p>
+        
+        </div>
+</body>
+</html>
